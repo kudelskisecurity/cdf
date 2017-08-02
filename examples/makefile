@@ -13,19 +13,19 @@ JAVASRC=$(wildcard *.java)
 JAVACLASS=$(JAVASRC:.java=.class)
 JAVACLASSPATH=".:./libs/bcprov-jdk15on-156.jar"
 
-OPENSSLSRC=$(wildcard *.c)
+OPENSSLSRC=$(wildcard *openssl.c)
 OPENSSLBINS=$(foreach f, $(OPENSSLSRC), $(basename $(f)))
 OPENSSLFLAGS=-lcrypto
 
-MDEBTLSSRC=$(wildcard *.c)
-MBEDTLSBINS=$(foreach f, $(OPENSSLSRC), $(basename $(f)))
+MDEBTLSSRC=$(wildcard *mbedtls.c)
+MBEDTLSBINS=$(foreach f, $(MDEBTLSSRC), $(basename $(f)))
 MBEDTLSFLAGS=-lmbedtls -lmbedcrypto
 
 TRASH=__pycache__ *.dSYM
 
 KERNEL_NAME := $(shell uname -s)
 ifeq ($(KERNEL_NAME), Darwin)
-	OPENSSLFLAGS += -L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include 
+	OPENSSLFLAGS += -L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include
 endif
 
 all:				cpp go openssl mbedtls java
