@@ -1,6 +1,6 @@
 # CDF – crypto differential fuzzing
 
-CDF is a tool to aumatically test the correctness and security of cryptographic
+CDF is a tool to automatically test the correctness and security of cryptographic
 software.  CDF can detect implementation errors, compliance failures,
 side-channel leaks, and so on.
 
