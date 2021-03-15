@@ -26,7 +26,7 @@ The purpose of CDF is to provide more efficient testing tool to developers and
 security researchers, being more effective than test vectors and cheaper than
 manual audit of formal verification.
 
-CDF was first presented at Black Hat USA 2017. You can view the [slides](TODO) of our presentation, which contain general information about the rationale behind and the design of CDF.
+CDF was first presented at Black Hat USA 2017. You can view the [slides](https://www.blackhat.com/docs/us-17/wednesday/us-17-Aumasson-Automated-Testing-Of-Crypto-Software-Using-Differential-Fuzzing.pdf) of our presentation, which contain general information about the rationale behind and the design of CDF.
 
 # Requirements
 
